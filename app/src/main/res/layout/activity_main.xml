@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.aniketvishal.basketballcount.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="100"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textview1"
+                android:text="Team A"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:textSize="22dp"/>
+
+            <TextView
+                android:id="@+id/team_a_textview"
+                android:text="0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/textview1"
+                android:layout_marginTop="20dp"
+                android:textSize="50dp"/>
+
+            <Button
+                android:id="@+id/buttona1"
+                android:text="+ 3Points"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/team_a_textview"
+                android:layout_marginTop="20dp"
+                android:onClick="threepointer1"/>
+
+            <Button
+                android:id="@+id/buttona2"
+                android:text="+ 2Points"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/buttona1"
+                android:layout_marginTop="20dp"
+                android:onClick="twopointer1"/>
+
+            <Button
+                android:text="Free throw"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/buttona2"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="20dp"
+                android:onClick="onepointer1"/>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="3dp"
+            android:layout_height="350dp"
+            android:layout_weight="1"
+            android:background="#4E4B4F" />
+
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="100"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textview2"
+                android:text="Team B"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:textSize="22dp"/>
+
+            <TextView
+                android:id="@+id/team_b_textview"
+                android:text="0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/textview2"
+                android:layout_marginTop="20dp"
+                android:textSize="50dp"/>
+
+            <Button
+                android:id="@+id/buttonb1"
+                android:text="+ 3Points"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/team_b_textview"
+                android:layout_marginTop="20dp"
+                android:onClick="threepointer2"/>
+
+            <Button
+                android:id="@+id/buttonb2"
+                android:text="+ 2Points"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/buttonb1"
+                android:layout_marginTop="20dp"
+                android:onClick="twopointer2"/>
+
+            <Button
+                android:text="Free throw"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/buttonb2"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="20dp"
+                android:onClick="onepointer2"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:text="Reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="reset"/>
+
+</RelativeLayout>
